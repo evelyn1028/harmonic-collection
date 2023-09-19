@@ -1,3 +1,23 @@
 body{
   background-color:darkviolet;
 }
+
+h1{
+  color:rgb(240, 113, 134);
+  font-family:American Typewriter, serif;
+}
+h2{
+  font-family:American Typewriter, serif;
+}
+h3{
+  font-family:American Typewriter, serif;
+}
+p{
+  font-family:American Typewriter, serif;
+}
+summary{
+  font-family:American Typewriter, serif;
+}
+li{
+  font-family:American Typewriter, serif;
+}
