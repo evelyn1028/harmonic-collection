@@ -17,6 +17,9 @@ p{
 summary{
   font-family:American Typewriter, serif;
 }
+ul {
+  list-style-image: url('../entry-2/heart-emoji.png');
+}
 li{
   font-family:American Typewriter, serif;
 }
