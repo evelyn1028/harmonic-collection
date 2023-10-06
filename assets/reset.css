@@ -6,17 +6,42 @@ div:nth-child(2) {
 	width: 12%;
 	z-index: 1;
 }
+
 div {
     /* background-color: lightgrey;
 	border: solid black 1px; */
     padding: 10px;
 }
-.image-container{
+
+.image-container {
 	position: relative;
-	max-width: 80%;
+	max-width: 50%;
 }
-img{
+
+img {
     width: 300px;
     height: 300px;
 	max-width: 100%;
+	vertical-align: top;
+}
+
+aside {
+	max-width: calc(50% - 20px);
+	word-wrap: normal;
+	padding: 7px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+p {
+	width: 50%;
+	display: inline-block;
+	text-align: left;
+	white-space: pre;
+	margin: auto;
+}
+@media (hover: hover) {
+	aside {visibility: hidden;}
+
+	img:hover + aside {visibility: visible;}
 }

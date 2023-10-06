@@ -1,25 +1,13 @@
 body{
   background-color:darkviolet;
+  font-family:American Typewriter, serif;
 }
 h1{
   color:rgb(240, 113, 134);
-  font-family:American Typewriter, serif;
 }
-h2{
-  font-family:American Typewriter, serif;
-}
-h3{
-  font-family:American Typewriter, serif;
-}
-p{
-  font-family:American Typewriter, serif;
-}
-summary{
-  font-family:American Typewriter, serif;
+h4{
+  color:rgb(240, 113, 134);
 }
 ul {
   list-style-image: url('../entry-2/heart-emoji.png');
-}
-li{
-  font-family:American Typewriter, serif;
 }
