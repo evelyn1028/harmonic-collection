@@ -1,12 +1,25 @@
+body, html {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+h1 {
+	text-align: center;
+	border-style: double;
+	padding: 20px;
+	margin: 0px;
+  }
 div:nth-child(2) {
-	background-color: palegoldenrod;
-	right: 30px;
+	border-style: solid;
+	border-width: 4px;
 	position: fixed;
-	top: 100px;
-	width: 12%;
+	font-size: 30px;
 	z-index: 1;
 }
-
 div {
     /* background-color: lightgrey;
 	border: solid black 1px; */
@@ -17,14 +30,6 @@ div {
 	position: relative;
 	max-width: 50%;
 }
-
-img {
-    width: 300px;
-    height: 300px;
-	max-width: 100%;
-	vertical-align: top;
-}
-
 aside {
 	max-width: calc(50% - 20px);
 	word-wrap: normal;
@@ -39,9 +44,4 @@ p {
 	text-align: left;
 	white-space: pre;
 	margin: auto;
-}
-@media (hover: hover) {
-	aside {visibility: hidden;}
-
-	img:hover + aside {visibility: visible;}
 }

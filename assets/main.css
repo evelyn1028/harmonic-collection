@@ -1,9 +1,13 @@
 body{
-  background-color:darkviolet;
-  font-family:American Typewriter, serif;
+  font-family: American Typewriter, serif;
 }
-h1{
-  color:rgb(240, 113, 134);
+h1 {
+  font-size: 70px;
+}
+h2 {
+  margin: 0px;
+  text-align: center;
+  font-size: 40px;
 }
 h4{
   color:rgb(240, 113, 134);
