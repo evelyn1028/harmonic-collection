@@ -1,104 +1,114 @@
 <!DOCTYPE html>
  <html>
    <head>
-     <title>Harmonic Collection HomePage</title>
+     <title>Harmonic Collection Entry 2</title>
      <link href="../assets/reset.css" rel="stylesheet" type="text/css">
      <link href="../assets/main.css" rel="stylesheet">
      <style>
-      body {
-        background-color: plum;
-        color: purple;
-      }
-      h1 {
-        font-size: 60px;
-        border: none;
-      }
-      div {
-        max-height: 200px;
-        max-width: 200px;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-      }
-      .toc {
-        top: 20px;
-        left: 20px;
-        padding: 10px 30px;
-        z-index: 0;
-      }
-      div:nth-child(3) {
-        position: absolute;
-        top: 100px;
-        left: 420px;
-      }
-      div:nth-child(4) {
-        position: absolute;
-        bottom: 90px;
-        left: 150px;
-      }
-      div:nth-child(5) {
-        position: absolute;
-        top: 150px;
-        left: 80px;
-      }
-      div:nth-child(6) {
-        position: absolute;
-        top: 350px;
-        left: 480px;
-      }
-      div:nth-child(7) {
-        position: absolute;
-        top: 220px;
-        right: 380px;
-      }
-      div:nth-child(8) {
-        position: absolute;
-        top: 120px;
-        right: 50px;
-      }
-      div:nth-child(9) {
-        position: absolute;
-        bottom: 50px;
-        right: 460px;
-      }
-      div:nth-child(10) {
-        position: absolute;
-        bottom: 150px;
-        right: 80px;
+        *{margin:0; padding:0;}
+        body {
+            color: navy;
+            background-image: url(../assets/entry-2/background-img.png);
+        }
+        h1 {
+          border: double 5px navy;
+          background-color: skyblue;
+        }
+        p {
+            font-size: x-large;
+            margin: 20px 5px;
+        }
+        .toc{
+          bottom: 10px;
+          right: 10px;
+          border-color: navy;
+          background-color: skyblue;
+        }
+        .container {
+            margin: 50px auto;
+            background-color: rgba(135, 207, 235, 0.411);
+            width: 75%;
+            height: 200px;
+            overflow: visible;
+            display: flex;
+        }
+        figure {
+            display: flex;
+            flex-direction: column;
+        }
+        figcaption {
+            background-color: skyblue;
+            color: navy;
+            text-align: center;
+            margin: 30px;
+            caption-side: bottom;
+        }
+        .container img{
+            height: 95%;
+            float: left;
+            vertical-align: top;
+            margin: 0px 20px;
+            /* display: inline-block; */
+        }
+        .restaurant{
+            text-align: center;
+            width: 8%;
+        }
+        @media (hover: hover) {
+        figcaption {
+          visibility: hidden;
+        }
+        img:hover + figcaption {
+          visibility: visible;
+        }
       }
      </style>
    </head>
    <body>
-     <h1>Ways to Improve Quality of Life</h1>
-
-     <div class="toc">
-      <a href="../entry-1/index.html">BACK</a>
+    <h1>Dining out with friends for a good chat</h1>
+    <p>One way I enhance the quality of life is by enjoying delicious food and engaging in conversation with close friends <br>
+    It's a stress-reliever and brings me happiness. <br>
+    So, I'd like to recommend some resrtaurants I've been to for all of you!</p>
+    <div class="toc">
+        <a href="../index.html">Go to ToC</a>
      </div>
 
-     <div>
-      <a><img src="../assets/Empty-Entry.png"></a>
-     </div>
-     <div>
-      <a href="../entry-6/index.html"><img src="../assets/Entry6-icon.png"></a>
-     </div>
-     <div>
-      <a href="../entry-3/index.html"><img src="../assets/Entry3-icon.png"></a>
-     </div>
-     <div>
-      <a href="../entry-4/index.html"><img src="../assets/Entry4-icon.png"></a>
-     </div>
-     <div>
-      <a href="../entry-5/index.html"><img src="../assets/Entry5-icon.png"></a>
-     </div>
-     <div>
-      <a><img src="../assets/Empty-Entry.png"></a>
-     </div>
-     <div>
-      <a><img src="../assets/Empty-Entry.png"></a>
-     </div>
-     <div>
-      <a><img src="../assets/Empty-Entry.png"></a>
-     </div>
+    <div class="container">
+        <div class="restaurant">Nami Nori</div>
+        <a href="https://www.google.com/maps/dir//nami+nori/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89c25953a8f2f671:0xcde10862f74f8052?sa=X&ved=2ahUKEwjtgoWRr5mCAxXtm4kEHdMnC6sQ9Rd6BAhSEAA&ved=2ahUKEwjtgoWRr5mCAxXtm4kEHdMnC6sQ9Rd6BAhhEAQ"><img src="../assets/entry-2/Nami_Nori.png"></a>
+        <figure>
+            <img src="../assets/entry-2/Nami_Nori_1.png">
+            <figcaption> Spicy Tuna Dip </figcaption>
+        </figure>
+
+        <figure>
+            <img src="../assets/entry-2/Nami_Nori_2.png">
+            <figcaption> Tempura misto </figcaption>
+        </figure>
+
+        <figure>
+            <img src="../assets/entry-2/Nami_Nori_3.png" height="200px">
+            <figcaption> The Classic Set </figcaption>
+        </figure>
+    </div>
+
+    <div class="container">
+        <div class="restaurant">LAVO</div>
+        <a href="https://www.google.com/maps/dir/40.7468831,-73.994756/LAVO+Italian+Restaurant,+39+E+58th+St,+New+York,+NY+10022/@40.7535021,-74.002908,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89c258faadbafd53:0xd549b5b10458d5ce!2m2!1d-73.971433!2d40.762931?entry=ttu"><img src="../assets/entry-2/LAVO.png"></a>
+        <figure>
+            <img src="../assets/entry-2/LAVO_1.png">
+            <figcaption> New York Strip </figcaption>
+        </figure>
+
+        <figure>
+            <img src="../assets/entry-2/LAVO_2.png">
+            <figcaption> Margheritta & Meatball</figcaption>
+        </figure>
+
+        <figure>
+            <img src="../assets/entry-2/LAVO_3.png" height="200px">
+            <figcaption> Truffle Ricotta Cavatelli </figcaption>
+        </figure>
+    </div>
    </body>
  </html>

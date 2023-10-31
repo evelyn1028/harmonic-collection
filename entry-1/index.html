@@ -2,40 +2,129 @@
  <html>
    <head>
      <title>Harmonic Collection Entry 1</title>
+     <link href="../assets/reset.css" rel="stylesheet" type="text/css">
      <link href="../assets/main.css" rel="stylesheet">
      <style>
-      body {
-        background-size: cover;
-        color: blue;
-      }
-      div:nth-child(2) {
-        border: solid blue 4px;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 30px;
-        padding: 10px 30px;
-        z-index: 1;
-      }
+        *{margin:0; padding:0;}
+        body {
+            color: rgb(106, 67, 34);
+            background-image: url(../assets/entry-1/background-img.png);
+        }
+        h1 {
+            border: none;
+            font-size: 100px;
+        }
+        .toc {
+            bottom: 10px;
+            right: 10px;
+            border-color: rgb(106, 67, 34);
+            background-color: burlywood;
+        }
+        .collapsible {
+            cursor: pointer;
+            padding: 10px;
+            border-style: solid;
+            border-width: 4px;
+            position: fixed;
+            font-size: 30px;
+            z-index: 1;
+            border-color: rgb(106, 67, 34);
+            background-color: burlywood; 
+            color: rgb(106, 67, 34);
+        }
+        .collapsible#ingredients-button {
+            bottom: 150px;
+            right: 10px;
+        }
+       .collapsible#steps-button {
+            bottom: 80px;
+            right: 10px;
+        }
+        .content {
+            position: absolute;
+            font-family: sans-serif;
+            border: brown 5px double;
+            background-color: burlywood;
+            z-index: 1;
+            display: none;
+        }
+        .content#ingredients {
+            bottom: 220px;
+            right: 10px;
+        }
+        .content#steps {
+            bottom: 220px;
+            right: 10px;
+        }
+        #cookie-text {
+            position: absolute;
+            left: 10px;
+            top: 140px;
+        }
+        #cookie-tray {
+            position: absolute;
+            left: 100px;
+            top: 470px;
+        }
+        #making-cookie {
+            position: absolute;
+            left: 700px;
+            top: 190px;
+        }
      </style>
    </head>
-   <body background="../assets/Sea.jpg">
-     <h1 style="color: blue; text-align: center">Welcome to my Website!</h1>
+   <body>
+    <h1>Making Cookies</h1>
+    <div class="toc">
+        <a href="../index.html">Go to ToC</a>
+    </div>
+    <div id="cookie-text"><img src="../assets/entry-1/cookie-text.png" width="450px"></div>
+    <div id="cookie-tray"><img src="../assets/entry-1/cookie-tray.png" width="500px"></div>
+    <div id="making-cookie"><img src="../assets/entry-1/making-cookie.png" width="450px"></div>
+    
+    <button type="button" class="collapsible" id="ingredients-button">Ingredients</button>
+    <div class="content" id="ingredients">
+        Mini Chocolate Chip (Approx. 20 servings) Recipe<br>
+        &lt;Ingredients&gt;<br>
+        Unsalted butter 60g<br>
+        Brown sugar 30g<br>
+        Granulated sugar 75g<br>
+        Half an egg<br>
+        Vanilla extract 0.3 teaspoon<br>
+        Salt 0.5g<br>
+        All-purpose flour 110g<br>
+        Baking powder 1<br>
+        Dark chocolate 100g
+    </div>
 
-     <div>
-      <a href="../entry-2/index.html">HOME</a>
-     </div>
-     <h2 style="color: blue; text-align: center"><em>by Evelyn Yoon</em></h2>
-     <br><br><br>
+    <button type="button" class="collapsible" id="steps-button">Steps to Make</button>
+    <div class="content" id="steps">
+        &lt;Steps to Make&gt;<br>
+        1. Combine sugar and pre-melted butter in a bowl with half an egg and mix well.<br>
+        2. Add vanilla extract and mix thoroughly.<br>
+        3. Sift all-purpose flour, baking powder, and salt into the mixture, then stir until combined.<br>
+        4. Finally, add the chocolate chips and mix until well incorporated.<br>
+        5. Cover the dough with plastic wrap and refrigerate for 1 hour to allow it to mature.<br>
+        6. Preheat the over to 400°F (200°C), place portions of the dough on a baking sheet, and bake at 350°F (180°C) for 8 minutes.<br>
+        7. Once the cookies are done, transfer them to a lovely plate and enjoy with a cup of coffee.<br>
+    </div>
 
-     <h2 style="color: blue; text-align: center">We are delighted to have you on our website. <br>
-      This is a place dedicated to providing a wealth of information <br>
-      and various methods to enhance your quality of life. <br>
-      Our goal is to assist you in living a healthier and happier life.</h3><br>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
 
-
-     <footer>
-        <p>&copy; 2023 Harmonic Collection</p>
-     </footer>
    </body>
  </html>

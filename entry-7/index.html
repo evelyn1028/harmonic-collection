@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Harmonic Collection Entry 7</title>
+        <link href="../assets/reset.css" rel="stylesheet" type="text/css">
+        <link href="../assets/main.css" rel="stylesheet">
+        <style>
+        *{margin:0; padding:0;}
+        body {
+            background-image: url(../assets/entry-7/background-img.png);
+        }
+        .toc {
+          bottom: 10px;
+          right: 10px;
+          border-color: navy;
+          background-color: skyblue;
+        }
+        #title {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .bubble{
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+        .container {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            margin-bottom: 100px;
+        }
+        .image {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          opacity: 0;
+          transition: .5s ease;
+        }
+        .container:hover .overlay {
+          opacity: 1;
+        }
+     </style>
+    </head>
+    <body>
+    <img src="../assets/entry-7/title.png" id="title" width="80%">
+    
+    <div class="toc">
+        <a href="../index.html">Go to ToC</a>
+    </div>
+    <img class="bubble" src="../assets/entry-7/bubble-1.png" width="40%">
+    <img class="bubble" src="../assets/entry-7/bubble-2.png" width="40%">
+
+    <div class="container">
+      <img class="image" src="../assets/entry-7/img1.png">
+      <div class="overlay"><img class="image" src="../assets/entry-7/img1-hover.png"></div>
+    </div>
+
+    <div class="container">
+      <img class="image" src="../assets/entry-7/img2.png">
+      <div class="overlay"><img class="image" src="../assets/entry-7/img2-hover.png"></div>
+    </div>
+    </body>
+</html>
