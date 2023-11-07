@@ -74,6 +74,7 @@ li{
 .controls{
 	text-align: center;
 	margin-top: 50px;
+	cursor: pointer;
 }
 
 .controls span{
@@ -89,4 +90,19 @@ li{
 	background-color: transparent;
 	font-size: xx-large;
 	margin-bottom: 10px;
+}
+.collapsible {
+	cursor: pointer;
+	padding: 10px;
+	border-style: solid;
+	border-width: 4px;
+	position: fixed;
+	font-size: 30px;
+	z-index: 1;
+}
+.content {
+	position: absolute;
+	font-family: sans-serif;
+	z-index: 1;
+	display: none;
 }

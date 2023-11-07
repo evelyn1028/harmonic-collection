@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+     <title>Harmonic Collection Entry 8</title>
+     <link href="../assets/reset.css" rel="stylesheet" type="text/css">
+     <link href="../assets/main.css" rel="stylesheet">
+     <style>
+        *{margin:0; padding:0;}
+        body {
+            background-image: urL(../assets/entry-8/background-image.png);
+            color:rgb(57, 147, 88);
+        }
+        h1 {
+            text-align: left;
+            border: none;
+            font-size: 100px;
+        }
+        .toc{
+            bottom: 10px;
+            right: 10px;
+            border-color: rgb(57, 147, 88);
+            background-color: rgb(188, 215, 159);
+        }
+
+        .toc a:link{
+            color: rgb(57, 147, 88);
+        }
+        .collapsible {
+            border-color: rgb(57, 147, 88);
+            background-color: rgb(188, 215, 159);
+            color: rgb(57, 147, 88);
+        }
+        .collapsible#ingredients-button {
+            bottom: 150px;
+            right: 10px;
+        }
+       .collapsible#steps-button {
+            bottom: 80px;
+            right: 10px;
+        }
+        .content {
+            border: rgb(57, 147, 88) 5px double;
+            background-color: rgb(188, 215, 159);
+        }
+        .content#ingredients {
+            bottom: 220px;
+            right: 10px;
+        }
+        .content#steps {
+            bottom: 220px;
+            right: 10px;
+        }
+        .slide_wrapper {
+            border-color: rgb(57, 147, 88);
+            width: 680px;
+            height: 400px;
+        }
+        .slide_total {
+            position: absolute;
+            right: 10px;
+            top: 50px;
+        }
+        .slides img{
+            width: 600px;
+            height: 400px;
+        }
+        .controls span{
+            border: rgb(57, 147, 88) 4px solid;
+            background-color: rgb(188, 215, 159);
+            color: rgb(57, 147, 88);
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+        #gimbap-text{
+            position: absolute;
+            top: 150px;
+            left: 80px;
+        }
+        #gimbap{
+            position: absolute;
+            left: 200px;
+            bottom: 10px;
+        }
+     </style>
+   </head>
+   <body>
+    <h1>Making Gimbap</h1>
+    <div class="toc">
+      <a href="../index.html">Go to ToC</a>
+    </div>
+    <div class="slide_total">
+        <div class="slide_wrapper">
+            <ul class="slides">
+                <li><img src="../assets/entry-8/1.png"></li>
+                <li><img src="../assets/entry-8/2.png"></li>
+                <li><img src="../assets/entry-8/3.png"></li>
+                <li><img src="../assets/entry-8/4.png"></li>
+                <li><img src="../assets/entry-8/5.png"></li>
+                <li><img src="../assets/entry-8/6.png"></li>
+                <li><img src="../assets/entry-8/7.png"></li>
+                <li><img src="../assets/entry-8/8.png"></li>
+                <li><img src="../assets/entry-8/9.png"></li>
+                <li><img src="../assets/entry-8/10.png"></li>
+            </ul>
+        </div>
+        <p class="controls">
+            <span class="prev">prev</span>
+            <span class="next">next</span>
+        </p>
+    </div>
+
+    <button type="button" class="collapsible" id="ingredients-button">Ingredients</button>
+    <div class="content" id="ingredients">
+        Ingredients <br>
+        Rice, Gim (seaweed for gimbap), Ham, Fish cake, Eggs, Carrots, Pickled radish
+    </div>
+
+    <div id="gimbap-text"><img src="../assets/entry-8/gimbap-text.png" width="330px"></div>
+    <div id="gimbap"><img src="../assets/entry-8/gimbap.png" height="350px"></div>
+
+    <button type="button" class="collapsible" id="steps-button">Steps to Make</button>
+    <div class="content" id="steps">
+        &lt;Steps to Make&gt;<br>
+        1. In a bowl, beat 5 eggs and add a pinch of salt and pepper. Mix well.<br>
+        2. Slice the green onions into small pieces to remove the egg's raw taste.<br>
+        3. Heat a frying pan with cooking oil and pour the beaten eggs to cook.<br>
+        4. Grill the carrots over high heat.<br>
+        5. Grill the fish cake and ham.<br>
+        6. Now, all the gimbap ingredients are ready.<br>
+        7. Spread the rice thinly and evenly on the gim (seaweed).<br>
+        8. Place the prepared ingredients on top of the rice.<br>
+        9. Cut the gimbap into bite-sized pieces.
+    </div>
+
+    <script>
+        var slides = document.querySelector('.slides'),
+        slide = document.querySelectorAll('.slides li'),
+        currentIdx = 0,
+        slideCount = slide.length,
+        slideWidth = 600,
+        slideMargin = 40,
+        prevBtn = document.querySelector('.prev'),
+        nextBtn = document.querySelector('.next');
+
+        console.log(nextBtn);
+        console.log(prevBtn);
+        slides.style.width = (slideWidth + slideMargin) * slideCount + "px";
+
+        function moveSlide(num) {
+            slides.style.left = -num * 640 + 'px';
+            currentIdx = num;
+    }
+
+    nextBtn.addEventListener('click', function(){
+        if (currentIdx < slideCount - 1) {
+            moveSlide(currentIdx + 1);
+        }
+    });
+    prevBtn.addEventListener('click', function(){
+        if (currentIdx > 0) {
+            moveSlide(currentIdx - 1);
+        }
+    });
+    </script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+    </script>
+   </body>
+ </html>
