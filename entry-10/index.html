@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Harmonic Collection Entry 10</title>
+        <link href="../assets/reset.css" rel="stylesheet" type="text/css">
+        <link href="../assets/main.css" rel="stylesheet">
+        <style>
+        *{margin:0; padding:0;}
+        body {
+            background-color: rgb(176, 221, 239);
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+            background-size: cover;
+        }
+        .toc {
+          bottom: 10px;
+          right: 10px;
+          border-color: orange;
+          background-color: rgb(237, 198, 168);
+        }
+        h1 {
+            font-family: sans-serif;
+            font-size: 160px;
+            border: none;
+            color: orange;
+        }
+        .todo-list{
+            max-width: 540px;
+            background: white;
+            margin: 100px auto 20px;
+            padding: 40px 30px 70px;
+            border-radius: 10px;
+        }
+        .todo-list h2{
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .todo-list h2 img{
+            width: 30px;
+            margin-left: 10px;
+        }
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #edeef0;
+            border-radius: 30px;
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+        input{
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            padding: 10px;
+        }
+        button{
+            border: none;
+            outline: none;
+            padding: 16px 50px;
+            background-color: orange;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 40px;
+        }
+        ul li{
+            list-style: none;
+            font-size: 17px;
+            padding: 12px 8px 12px 50px;
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+        }
+        ul li::before{
+            content: '';
+            position: absolute;
+            height: 28px;
+            width: 28px;
+            border-radius: 50%;
+            background-image: url(../assets/entry-10/unchecked.png);
+            background-position: center;
+            top: 12px;
+            left: 8px;
+        }
+        ul li.done{
+            color: #555;
+            text-decoration: line-through;
+        }
+        ul li.done::before{
+            background-image: url(../assets/entry-10/checked.png);
+        }
+        ul li span{
+            position: absolute;
+            right: 0;
+            top: 5px;
+            width: 40px;
+            height: 40px;
+            font-size: 22px;
+            color: #555;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+        }
+        ul li span:hover{
+            background: #edeef0;
+        }
+     </style>
+    </head>
+    <body>
+    <h1>My To-do List</h1>
+
+    <div class="todo-list">
+       <h2>To-do List <img src="../assets/entry-10/icon.png"></h2>
+       <div class="row">
+            <input type="text" id="input-box" placeholder="Add your task">
+            <button onclick="addTask()">Add</button>
+       </div>
+       <ul id="list-container"></ul>
+    </div>
+
+    <div class="toc">
+        <a href="../index.html">Go to ToC</a>
+    </div>
+
+    <div style="width:60%;margin-left:auto;margin-right:auto;color: rgb(227, 108, 57);text-align: center;">
+        I feel accomplished and fulfilled every time I plan out my day with a To-Do List and complete my tasks I wrote. If you would also like to feel the same sense of accomplishmnet and fulfillment, why don't you give it a try using this To-Do list I created for you!
+    </div>
+    <script>
+        const inputBox = document.getElementById("input-box");
+        const listContainer = document.getElementById("list-container");
+
+        function addTask() {
+            if (inputBox.value == '') {
+                alert("You must write something as your task!");
+            }
+            else {
+                let task = document.createElement("li");
+                task.innerHTML = inputBox.value;
+                listContainer.appendChild(task);
+                let span = document.createElement("span");
+                span.innerHTML = "\u00d7";
+                task.appendChild(span);
+            }
+            inputBox.value = '';
+            saveData();
+        }
+
+        listContainer.addEventListener("click", function(e){
+            if (e.target.tagName === "LI") {
+                e.target.classList.toggle("done");
+            }
+            else if (e.target.tagName === "SPAN") {
+                e.target.parentElement.remove();
+            }
+            saveData();
+        }, false);
+
+        function saveData() {
+            localStorage.setItem("data", listContainer.innerHTML);
+        }
+        function showTask() {
+            listContainer.innerHTML = localStorage.getItem("data");
+        }
+        showTask();
+    </script>
+    </body>
+</html>
