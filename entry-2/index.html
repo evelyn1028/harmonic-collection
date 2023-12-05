@@ -8,15 +8,17 @@
         *{margin:0; padding:0;}
         body {
             color: navy;
-            background-image: url(../assets/entry-2/background-img.png);
+            background-image: url(../assets/entry2-imgs/background-img.png);
+            background-repeat: repeat-y;
+            background-size: contain;
         }
         h1 {
-          border: double 5px navy;
           background-color: skyblue;
         }
         p {
             font-size: x-large;
             margin: 20px 5px;
+            text-align: center;
         }
         .toc{
           bottom: 10px;
@@ -24,44 +26,54 @@
           border-color: navy;
           background-color: skyblue;
         }
-        .container {
-            margin: 50px auto;
-            background-color: rgba(135, 207, 235, 0.411);
-            width: 75%;
-            height: 200px;
-            overflow: visible;
+        #outer-container{
             display: flex;
+            justify-content: space-around;
         }
-        figure {
+        .container {
+            margin: 50px 100px;
+            padding: 0;
+            background-color: rgba(135, 207, 235, 0.411);
+            width: 50%;
+            /* overflow: visible; */
             display: flex;
             flex-direction: column;
+            align-items: center;
+        }
+        figure {
+            width: 100%;
+            flex-direction: column;
+            position: relative;
         }
         figcaption {
+            position: absolute;
+            right: 0;
+            top: 10px;
+            width: 15%;
             background-color: skyblue;
             color: navy;
             text-align: center;
-            margin: 30px;
-            caption-side: bottom;
+            margin: 0;
+            caption-side: right;
         }
-        .container img{
-            height: 95%;
-            float: left;
-            vertical-align: top;
-            margin: 0px 20px;
-            /* display: inline-block; */
+        img{
+            /* object-fit: contain; */
+            display: block;
+            min-width: 70%;
+            max-width: 70%;
+            margin: 10px auto;
         }
         .restaurant{
             text-align: center;
-            width: 8%;
         }
         @media (hover: hover) {
-        figcaption {
-          visibility: hidden;
+            figcaption {
+            display: none;
+            }
+            img:hover + figcaption {
+            display: block;
+            }
         }
-        img:hover + figcaption {
-          visibility: visible;
-        }
-      }
      </style>
    </head>
    <body>
@@ -73,42 +85,45 @@
         <a href="../index.html">Go to ToC</a>
      </div>
 
-    <div class="container">
-        <div class="restaurant">Nami Nori</div>
-        <a href="https://www.google.com/maps/dir//nami+nori/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89c25953a8f2f671:0xcde10862f74f8052?sa=X&ved=2ahUKEwjtgoWRr5mCAxXtm4kEHdMnC6sQ9Rd6BAhSEAA&ved=2ahUKEwjtgoWRr5mCAxXtm4kEHdMnC6sQ9Rd6BAhhEAQ"><img src="../assets/entry-2/Nami_Nori.png"></a>
-        <figure>
-            <img src="../assets/entry-2/Nami_Nori_1.png">
-            <figcaption> Spicy Tuna Dip </figcaption>
-        </figure>
+    <div id="outer-container">
+        <div class="container">
+            <div class="restaurant">Nami Nori</div>
+            <a style = "width: 100%" href="https://www.google.com/maps/dir//nami+nori/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89c25953a8f2f671:0xcde10862f74f8052?sa=X&ved=2ahUKEwjtgoWRr5mCAxXtm4kEHdMnC6sQ9Rd6BAhSEAA&ved=2ahUKEwjtgoWRr5mCAxXtm4kEHdMnC6sQ9Rd6BAhhEAQ"><img src="../assets/entry2-imgs/Nami_Nori.png"></a>
+            <figure>
+                <img src="../assets/entry2-imgs/Nami_Nori_1.png">
+                <figcaption>Spicy Tuna Dip</figcaption>
+            </figure>
 
-        <figure>
-            <img src="../assets/entry-2/Nami_Nori_2.png">
-            <figcaption> Tempura misto </figcaption>
-        </figure>
+            <figure>
+                <img src="../assets/entry2-imgs/Nami_Nori_2.png">
+                <figcaption> Tempura misto </figcaption>
+            </figure>
 
-        <figure>
-            <img src="../assets/entry-2/Nami_Nori_3.png" height="200px">
-            <figcaption> The Classic Set </figcaption>
-        </figure>
+            <figure>
+                <img src="../assets/entry2-imgs/Nami_Nori_3.png">
+                <figcaption> The Classic Set </figcaption>
+            </figure>
+        </div>
+
+        <div class="container">
+            <div class="restaurant">LAVO</div>
+            <a style = "width: 100%" href="https://www.google.com/maps/dir/40.7468831,-73.994756/LAVO+Italian+Restaurant,+39+E+58th+St,+New+York,+NY+10022/@40.7535021,-74.002908,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89c258faadbafd53:0xd549b5b10458d5ce!2m2!1d-73.971433!2d40.762931?entry=ttu"><img src="../assets/entry2-imgs/LAVO.png"></a>
+            <figure>
+                <img src="../assets/entry2-imgs/LAVO_1.png">
+                <figcaption> New York Strip </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../assets/entry2-imgs/LAVO_2.png">
+                <figcaption> Margheritta & Meatball</figcaption>
+            </figure>
+
+            <figure>
+                <img src="../assets/entry2-imgs/LAVO_3.png">
+                <figcaption> Truffle Ricotta Cavatelli </figcaption>
+            </figure>
+        </div>
     </div>
 
-    <div class="container">
-        <div class="restaurant">LAVO</div>
-        <a href="https://www.google.com/maps/dir/40.7468831,-73.994756/LAVO+Italian+Restaurant,+39+E+58th+St,+New+York,+NY+10022/@40.7535021,-74.002908,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89c258faadbafd53:0xd549b5b10458d5ce!2m2!1d-73.971433!2d40.762931?entry=ttu"><img src="../assets/entry-2/LAVO.png"></a>
-        <figure>
-            <img src="../assets/entry-2/LAVO_1.png">
-            <figcaption> New York Strip </figcaption>
-        </figure>
-
-        <figure>
-            <img src="../assets/entry-2/LAVO_2.png">
-            <figcaption> Margheritta & Meatball</figcaption>
-        </figure>
-
-        <figure>
-            <img src="../assets/entry-2/LAVO_3.png" height="200px">
-            <figcaption> Truffle Ricotta Cavatelli </figcaption>
-        </figure>
-    </div>
    </body>
  </html>

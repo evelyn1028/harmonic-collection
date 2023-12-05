@@ -7,7 +7,7 @@
      <style>
         *{margin:0; padding:0;}
         body {
-            background-image: urL(../assets/entry-8/background-image.png);
+            background-image: urL(../assets/entry8-imgs/background-image.png);
             color:rgb(57, 147, 88);
         }
         h1 {
@@ -55,14 +55,10 @@
             width: 680px;
             height: 400px;
         }
-        .slide_total {
-            position: absolute;
-            right: 10px;
-            top: 50px;
-        }
         .slides img{
             width: 600px;
             height: 400px;
+            margin: 0;
         }
         .controls span{
             border: rgb(57, 147, 88) 4px solid;
@@ -71,15 +67,9 @@
             padding: 10px 20px;
             margin: 0 10px;
         }
-        #gimbap-text{
-            position: absolute;
-            top: 150px;
-            left: 80px;
-        }
-        #gimbap{
-            position: absolute;
-            left: 200px;
-            bottom: 10px;
+        img {
+            display: block;
+            margin: 25px auto;
         }
      </style>
    </head>
@@ -88,35 +78,12 @@
     <div class="toc">
       <a href="../index.html">Go to ToC</a>
     </div>
-    <div class="slide_total">
-        <div class="slide_wrapper">
-            <ul class="slides">
-                <li><img src="../assets/entry-8/1.png"></li>
-                <li><img src="../assets/entry-8/2.png"></li>
-                <li><img src="../assets/entry-8/3.png"></li>
-                <li><img src="../assets/entry-8/4.png"></li>
-                <li><img src="../assets/entry-8/5.png"></li>
-                <li><img src="../assets/entry-8/6.png"></li>
-                <li><img src="../assets/entry-8/7.png"></li>
-                <li><img src="../assets/entry-8/8.png"></li>
-                <li><img src="../assets/entry-8/9.png"></li>
-                <li><img src="../assets/entry-8/10.png"></li>
-            </ul>
-        </div>
-        <p class="controls">
-            <span class="prev">prev</span>
-            <span class="next">next</span>
-        </p>
-    </div>
 
     <button type="button" class="collapsible" id="ingredients-button">Ingredients</button>
     <div class="content" id="ingredients">
         Ingredients <br>
         Rice, Gim (seaweed for gimbap), Ham, Fish cake, Eggs, Carrots, Pickled radish
     </div>
-
-    <div id="gimbap-text"><img src="../assets/entry-8/gimbap-text.png" width="330px"></div>
-    <div id="gimbap"><img src="../assets/entry-8/gimbap.png" height="350px"></div>
 
     <button type="button" class="collapsible" id="steps-button">Steps to Make</button>
     <div class="content" id="steps">
@@ -131,6 +98,31 @@
         8. Place the prepared ingredients on top of the rice.<br>
         9. Cut the gimbap into bite-sized pieces.
     </div>
+
+    <div id="gimbap-text"><img src="../assets/entry8-imgs/gimbap-text.png" width="330px"></div>
+
+    <div class="slide_total">
+        <div class="slide_wrapper">
+            <ul class="slides">
+                <li><img src="../assets/entry8-imgs/1.png"></li>
+                <li><img src="../assets/entry8-imgs/2.png"></li>
+                <li><img src="../assets/entry8-imgs/3.png"></li>
+                <li><img src="../assets/entry8-imgs/4.png"></li>
+                <li><img src="../assets/entry8-imgs/5.png"></li>
+                <li><img src="../assets/entry8-imgs/6.png"></li>
+                <li><img src="../assets/entry8-imgs/7.png"></li>
+                <li><img src="../assets/entry8-imgs/8.png"></li>
+                <li><img src="../assets/entry8-imgs/9.png"></li>
+                <li><img src="../assets/entry8-imgs/10.png"></li>
+            </ul>
+        </div>
+        <p class="controls">
+            <span class="prev">prev</span>
+            <span class="next">next</span>
+        </p>
+    </div>
+    
+    <div id="gimbap"><img src="../assets/entry8-imgs/gimbap.png" height="350px"></div>
 
     <script>
         var slides = document.querySelector('.slides'),
